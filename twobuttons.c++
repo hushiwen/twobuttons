@@ -10,11 +10,9 @@ int main(void) {
 
     unsigned c = 0;
     while(m > n) {
-        if (m & 1 == 1) {
-            m += 1;
-            c ++;
-        }
-        m /= 2;
+        c += (m & 1);
+        m += (m & 1);
+        m >>= 1;
         c ++;
     }
 
